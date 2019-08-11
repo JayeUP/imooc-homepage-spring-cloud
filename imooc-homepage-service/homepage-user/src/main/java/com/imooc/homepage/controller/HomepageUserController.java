@@ -26,6 +26,11 @@ public class HomepageUserController {
         this.userService = userService;
     }
 
+    /**
+     * 127.0.0.1:9000/imooc/homepage-user/create/user
+     * @param request
+     * @return
+     */
     @PostMapping("/create/user")
     public UserInfo createUser(@RequestBody CreateUserRequest request) {
         log.info("<homepage-user>: create user -> {}",

@@ -28,7 +28,11 @@ public class HomepageCourseController {
         this.courseService = courseService;
     }
 
-    /** 通过id获取课程信息*/
+    /**
+     * 通过id获取课程信息
+     * 直接访问：127.0.0.1:7001/homepage-course/get/course?id=
+     * 通过网关访问：127.0.0.1:9000/imooc/homepage-course/get/course?id=
+     * */
     @GetMapping("/get/course")
     public CourseInfo getCourseInfo(Long id) {
         log.info("<homepage-course>: get course -> {}",id);
